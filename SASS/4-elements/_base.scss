@@ -1,0 +1,26 @@
+// ベーススタイル
+// 基本的な要素に対するスタイル
+// html, body, a
+
+html {
+    scroll-behavior: smooth;
+    // ページ内リンクがあった時にスクロールを滑らかにする
+    font-size: 62.5%;
+    // ベースのフォントサイズが10pxとして扱われる
+    // rem計算をしやすくするため
+    // 1.2rem　だと 12px　に簡単になる
+}
+
+body {
+    font-family: var(--font-family-ja);
+    font-size: 1.4rem;
+    // ここでは14pxになる
+    font-weight: normal;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
