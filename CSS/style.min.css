@@ -647,6 +647,70 @@ img {
   }
 }
 
+.c-hooterNav {
+  background-color: var(--sub-color1);
+}
+.c-hooterNav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.c-hooterNav__listItem {
+  text-align: center;
+  border-bottom: 1px solid var(--sub-color2);
+}
+.c-hooterNav__listItem:last-child {
+  border-bottom: none;
+}
+.c-hooterNav__listItem a {
+  display: block;
+  padding-block: 10px;
+  font-size: 2rem;
+  font-family: var(--font-family-en);
+  text-transform: uppercase;
+  color: var(--main-color);
+  letter-spacing: 0.1em;
+}
+.c-hooterNav__outerLink::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color);
+  -webkit-mask: url(../img/common/icon-outerlink.svg) no-repeat center center/contain;
+          mask: url(../img/common/icon-outerlink.svg) no-repeat center center/contain;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+@media screen and (min-width: 768px) {
+  .c-hooterNav {
+    background-color: var(--gray2);
+    padding-top: 16px;
+  }
+  .c-hooterNav__list {
+    flex-direction: row;
+    justify-content: center;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+  }
+  .c-hooterNav__listItem {
+    border-bottom: none;
+  }
+  .c-hooterNav__listItem a {
+    color: var(--white);
+    font-size: 1.4rem;
+  }
+  .c-hooterNav__outerLink::after {
+    background-color: var(--white);
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+  }
+}
+
 /*
 ├── 1-settings/     # 変数、カラーパレット、フォント設定
 ├── 2-tools/        # Mixin, Function (CSSは出力しない)
