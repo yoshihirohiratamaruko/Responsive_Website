@@ -3,9 +3,15 @@
 
 // 製品一覧
 .p-products {
+    padding-block: 64px;
+
+    .c-sectionTitle {
+        margin-bottom: 56px;
+    }
 
     &__list {
         row-gap: 24px;
+        margin-bottom: 32px;
     }
 
     &__listItem {
@@ -25,6 +31,10 @@
         margin-top: 0;
     }
 
+    &__link {
+        text-align: center;
+    }
+
     @include mq {
 
         &__list {
@@ -40,6 +50,10 @@
         &__listItemImg,
         &__listItemTitle {
             width: auto;
+        }
+
+        &__listItemTitle {
+            text-align: center;
         }
     }
 }
