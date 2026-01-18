@@ -822,6 +822,32 @@ img {
   }
 }
 
+.p-products__list {
+  row-gap: 24px;
+}
+.p-products__listItem a {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.p-products__listItemImg, .p-products__listItemTitle {
+  width: 50%;
+}
+.p-products__listItemTitle {
+  margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .p-products__list {
+    row-gap: 0;
+  }
+  .p-products__listItem a {
+    flex-direction: column;
+  }
+  .p-products__listItemImg, .p-products__listItemTitle {
+    width: auto;
+  }
+}
+
 /*
 ├── 1-settings/     # 変数、カラーパレット、フォント設定
 ├── 2-tools/        # Mixin, Function (CSSは出力しない)
