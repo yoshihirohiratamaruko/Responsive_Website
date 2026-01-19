@@ -269,11 +269,18 @@ img {
   inset: 0;
   background-color: var(--main-color);
   display: flex;
-  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
 }
+body.is-open .l-header__nav {
+  visibility: visible;
+  opacity: 1;
+}
+
 .l-header__navClose {
   position: absolute;
   right: 16px;

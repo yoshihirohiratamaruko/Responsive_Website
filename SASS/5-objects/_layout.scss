@@ -72,10 +72,18 @@
         inset: 0; //top, bottom, right, left : 0
         background-color: var(--main-color);
         display: flex;
-        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    // .l-header body.is-open .l-header__nav
+    @at-root body.is-open &__nav {
+        visibility: visible;
+        opacity: 1;
     }
 
     &__navClose {
