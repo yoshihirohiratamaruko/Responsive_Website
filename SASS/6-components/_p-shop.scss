@@ -1,0 +1,103 @@
+// プロダクトページ
+@use '../2-tools/mixin' as *;
+
+// メインビジュア
+.p-shop {
+    margin-block: 64px;
+
+    .c-sectionTitle {
+        margin-top: 0;
+        margin-bottom: 56px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__descriptionTitle {
+        margin: 0;
+
+        .c-headingSub {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__descriptionContact {
+        margin: 0 auto;
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .c-btn--white {
+        background-color: var(--sub-color1);
+        color: var(--text-color);
+        border-radius: 8px;
+    }
+
+    .c-btn--white::before {
+        background-color: var(--main-color);
+    }
+
+    &__informationDetail {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 0;
+    }
+
+    &__informationDetailItem {
+        border-bottom: 1px dotted var(--gray1);
+
+        dt {
+            font-size: 1.5rem;
+            padding-bottom: 8px;
+        }
+
+        dd {
+            margin-left: 0;
+            padding-bottom: 8px;
+        }
+    }
+
+    &__informationDetailMap {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__informationDetaiMapLink {
+        margin: 0 auto;
+    }
+
+    @include mq {
+
+        &__wrap {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 40px;
+        }
+
+        &__informationDetailMap {
+            margin-top: 0;
+        }
+
+        &__descrioptionContact {
+            margin: 0;
+        }
+
+        &__informationDetailItem {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+    }
+
+}

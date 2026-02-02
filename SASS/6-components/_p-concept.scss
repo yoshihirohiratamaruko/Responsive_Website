@@ -1,0 +1,146 @@
+// コンセプトページ
+@use '../2-tools/mixin' as *;
+
+// メインビジュアル
+.p-topMv {
+    height: 120px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include mq {
+        height: 400px;
+    }
+}
+
+// Component
+.p-component {
+    padding-block: 64px;
+
+    .c-sectionTitle {
+        margin-block: 0;
+        padding-bottom: 56px;
+    }
+
+    &__text {
+        padding-bottom: 40px;
+        text-align: center;
+
+        p {
+            line-height: 1.7;
+            margin-top: 0;
+        }
+
+    }
+
+    &__list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding-inline: 0;
+        margin-block: 0;
+    }
+
+    &__listItem {
+        display: block;
+        text-align: center;
+    }
+
+    &__listItemImg {
+        display: inline-block;
+        width: 152px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 16px;
+    }
+
+    &__listItemTitle {
+        margin-block: 0;
+    }
+
+    @include mq {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        &__listItemImg {
+            width: 260px;
+        }
+    }
+}
+
+// Promise
+.p-promise {
+    padding-block: 64px;
+    background-color: var(--base-color);
+
+    .c-sectionTitle {
+        margin-block: 0;
+        padding-bottom: 56px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin-top: 25px;
+        margin-bottom: 0;
+        gap: 32px;
+    }
+
+    &__listItem {
+        display: block;
+        flex-direction: column;
+        background-color: var(--white);
+        border: 1px solid var(--main-color);
+        border-radius: 8px;
+        position: relative;
+        padding-block: 40px 24px;
+        padding-inline: 24px;
+        margin-top: 25px;
+    }
+
+    &__number {
+        position: absolute;
+        display: block;
+        background-color: var(--main-color);
+        color: var(--white);
+        border-radius: 32px;
+        width: 50px;
+        height: 50px;
+        font-size: 3rem;
+        text-align: center;
+        top: 0;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    &__listItemTitle {
+        font-size: 1.5rem;
+        color: var(--main-color);
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+    &__listItemText {
+        margin-top: 0;
+        line-height: 1.7;
+    }
+
+    @include mq {
+       &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+       }
+    }
+}
+
